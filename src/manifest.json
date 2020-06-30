@@ -7,7 +7,7 @@
     "content_scripts":[
         {
           "matches": ["https://qiita.com/*"],
-          "js": ["jquery_3.5.1.js","content.js","tabSpace.js"]
+          "js": ["jquery_3.5.1.js","content.js"]
         }
       ]
 }
