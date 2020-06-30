@@ -1,5 +1,3 @@
-const AVG_READ_TIME = 400;
-
 $(function(){
   let readText = $('section').text();
   $('textarea').on('keydown' , 
@@ -19,7 +17,7 @@ $(function(){
 function addText(text) {
   if(text !== void 0) {
     let textLen = text.length === 0 ? 1 : text.length;
-    let calcReadTime = Math.round(textLen / AVG_READ_TIME);
+    let calcReadTime = Math.round(textLen / 400);
     return '<p>' + calcReadTime + '分で読めます' + '</p>';
   }
 }
