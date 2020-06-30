@@ -1,10 +1,18 @@
 const AVG_READ_TIME = 400;
 
 $(function(){
-  console.log('★★★★★★★★★★★★★');
-  
   let readText = $('section').text();
-
+  $('textarea').on('keydown' , 
+  function (e){
+    if(e.keyCode === 9) {
+      e.preventDefault();
+      let elm = e.target;
+      let val = elm.value;
+      let pos = elm.selectionStart;
+      elm.value = val.substr(0, pos) + '\t' + val.substr(pos, val.length);
+      elm.setSelectionRange(pos + 1, pos + 1);
+    }
+  });
   $('.it-Tags').append(addText(readText));
 });
  

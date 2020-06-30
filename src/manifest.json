@@ -1,13 +1,13 @@
 {
-    "name" : "QittaReadCount",
+    "name" : "QittaExtensionPack",
     "version" : "1.0",
-    "description" : "Qittaで読了目安をポップアップ表示する拡張機能です。",
+    "description" : "Qittaでかゆいところに手が届く拡張機能です。",
     "manifest_version" : 2,
     "permissions": ["declarativeContent", "storage"],
     "content_scripts":[
         {
           "matches": ["https://qiita.com/*"],
-          "js": ["jquery_3.5.1.js","content.js"]
+          "js": ["jquery_3.5.1.js","content.js","tabSpace.js"]
         }
       ]
 }
